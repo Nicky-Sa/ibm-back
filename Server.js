@@ -139,7 +139,7 @@ app.get('/get-comments', (req, res) => {
     })
 });
 
-app.listen(4000, () => {
+app.listen(5000, () => {
     console.log("Server started!");
 });
 
@@ -148,7 +148,8 @@ const databaseHandle = (operation, queryText) => {
         host: config.db.host,
         user: config.db.user,
         password: config.db.password,
-        database: config.db.database
+        database: config.db.database,
+        port: config.db.port
     })
 
     switch (operation) {
